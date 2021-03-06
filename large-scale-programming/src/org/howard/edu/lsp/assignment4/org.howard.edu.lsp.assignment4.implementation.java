@@ -2,6 +2,7 @@
 
 package org.howard.edu.lsp.assignment4;
 import java.util.ArrayList;
+import java.util.Collections;
 
 class IntegerSet{
 	//Creates a new Arraylist called set
@@ -20,17 +21,30 @@ class IntegerSet{
 	}
 	
 	//Checks to see if the sets, or ArrayLists contain the same numbers
-	/*public boolean equals(IntegerSet b)
+	public boolean equals(IntegerSet b)
 	{
-		if (set.size() == b.length())
+		ArrayList<Integer> setCompare1 = new ArrayList<Integer>();
+		ArrayList<Integer> setCompare2 = new ArrayList<Integer>();
+		
+		setCompare1 = set;
+		setCompare2 = b.set;
+		
+		boolean equal = false;
+		if (set.size() != b.length())
 		{
-		for (int i = 0; i < b.length(); i++)
+			equal = false;
+		}
+		else if(set.size() == b.length())
 		{
+			Collections.sort(setCompare1);
+			Collections.sort(setCompare2);
+			
+			equal = setCompare1.equals(setCompare2);
 			
 		}
-		}
+		return equal;
 	}
-	*/
+	
 	//Check to see if the Set contains a certain number value
 	public boolean contains(int value)
 	{
@@ -50,18 +64,20 @@ class IntegerSet{
 	}
 	
 	// gets the largest int in the set
-	public int largest() 
+	public int largest() throws IntegerSetException
 	{
-	int largest = 0;
 	
+	int largest;
+
 	if (set.isEmpty())
 	{
-		//throw new Exception("The String is Empty");
+		throw new IntegerSetException("The String is Empty, so largest int cannot be found");
 	}
 	
 	
 	else
 	{
+		largest = set.get(0);
 		for (int i = 0; i < set.size(); i++)
 		{
 			if (largest < set.get(i))
@@ -78,17 +94,18 @@ class IntegerSet{
 	}
 	
 	//gets the smallest int in the set
-	public int smallest()
+	public int smallest() throws IntegerSetException
 	{
-		int smallest = set.get(0);
+		int smallest;
 		
 		if (set.isEmpty())
 		{
-			//throw new integerSetException("The String is Empty");
+			throw new IntegerSetException("The String is Empty, so smallest int cannot be found");
 		}
 		
 		else
 		{
+			smallest = set.get(0);
 			for (int i = 0; i < set.size(); i++)
 			{
 				if (smallest > set.get(i))
@@ -123,7 +140,18 @@ class IntegerSet{
 	{
 		if (set.contains(item) == true)
 		{
-		set.remove(item);
+			for (int i=0; i < set.size(); i++)
+			{
+				if(set.get(i) == item)
+				{
+					set.remove(i);
+				}
+				else
+				{
+					continue;
+				}
+		
+			}
 		}
 		else
 		{
