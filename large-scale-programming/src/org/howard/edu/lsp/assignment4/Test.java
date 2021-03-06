@@ -126,6 +126,7 @@ public static void main(String[] args) throws IntegerSetException
 	testSet6.add(11);
 	testSet6.add(12);
 	System.out.println("Set 6: " + testSet6.toString());
+	//Should be same as they are the exact same
 	System.out.println("Set 5 and 6 are equal: " + testSet5.equals(testSet6));
 	
 	IntegerSet testSet7 = new IntegerSet();
@@ -134,6 +135,7 @@ public static void main(String[] args) throws IntegerSetException
 	testSet7.add(12);
 	testSet7.add(11);
 	System.out.println("Set 7: " + testSet7.toString());
+	//Should be same even though they are out of order
 	System.out.println("Set 6 and 7 are equal: " + testSet6.equals(testSet7));
 	
 	IntegerSet testSet8 = new IntegerSet();
@@ -143,6 +145,7 @@ public static void main(String[] args) throws IntegerSetException
 	testSet8.add(12);
 	testSet8.add(13);
 	System.out.println("Set 8: " + testSet8.toString());
+	//Should be different as a new number is introduced.
 	System.out.println("Set 7 and 8 are equal: " + testSet7.equals(testSet8));
 		
 }
