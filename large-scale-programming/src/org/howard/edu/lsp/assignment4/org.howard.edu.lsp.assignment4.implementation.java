@@ -20,7 +20,7 @@ class IntegerSet{
 	}
 	
 	//Checks to see if the sets, or ArrayLists contain the same numbers
-	public boolean equals(IntegerSet b)
+	/*public boolean equals(IntegerSet b)
 	{
 		if (set.size() == b.length())
 		{
@@ -30,7 +30,7 @@ class IntegerSet{
 		}
 		}
 	}
-	
+	*/
 	//Check to see if the Set contains a certain number value
 	public boolean contains(int value)
 	{
@@ -56,7 +56,7 @@ class IntegerSet{
 	
 	if (set.isEmpty())
 	{
-		throw new Exception("The String is Empty");
+		//throw new Exception("The String is Empty");
 	}
 	
 	
@@ -74,6 +74,7 @@ class IntegerSet{
 			}
 		}
 	}
+	return largest;
 	}
 	
 	//gets the smallest int in the set
@@ -83,7 +84,7 @@ class IntegerSet{
 		
 		if (set.isEmpty())
 		{
-			throw new IntegerSetException("The String is Empty");
+			//throw new integerSetException("The String is Empty");
 		}
 		
 		else
@@ -100,6 +101,7 @@ class IntegerSet{
 				}
 			}
 		}
+		return smallest;
 	}
 	
 	//adds an integer to the set if it is not already in the set
@@ -111,7 +113,7 @@ class IntegerSet{
 		}
 		else
 		{
-			continue;
+			
 		}
 		return;
 	}
@@ -125,7 +127,7 @@ class IntegerSet{
 		}
 		else
 		{
-			continue;
+		
 		}
 		return;
 	}
@@ -135,11 +137,17 @@ class IntegerSet{
 	{
 		IntegerSet set3 = new IntegerSet();
 		String S3;
-	for(int i= 0; i < set.size() + intSetb.length(); i++)
+	for(int i= 0; i < set.size() ; i++)
 	{
 		set3.add(set.get(i));
-		set3.add(intSetb.set.get(i));
+		
 	}
+	for(int j= 0; j < intSetb.length() ; j++)
+	{
+		set3.add(intSetb.set.get(j));
+		
+	}
+	
 	
 	S3 = set3.set.toString();
 	
@@ -188,4 +196,3 @@ class IntegerSet{
 	}
 	}
 	
-}
