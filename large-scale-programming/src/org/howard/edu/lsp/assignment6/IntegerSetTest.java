@@ -260,7 +260,74 @@ class IntegerSetTest {
     
     assertEquals(5,length);
     }
-      // Junit test case for testing length
+    
+    /*
+    @Test
+    @DisplayName("Test case for Union")
+    public void testUnion() throws IntegerSetException {
+    String union;
+    
+    IntegerSet test = new IntegerSet();
+   	test.add(1);
+   	test.add(2);
+   	test.add(3);
+   	
+   	IntegerSet test2 = new IntegerSet();
+   	test2.add(3);
+   	test2.add(5);
+   	
+   
+   	test.union(test2);
+    
+   //System.out.println(test.union(test2));
+    assertEquals("[3]", );
+    */
+    
+    /*
+    @Test
+    @DisplayName("Test case for difference")
+    public void testDiff() throws IntegerSetException {
+    String union;
+    
+    IntegerSet test = new IntegerSet();
+   	test.add(1);
+   	test.add(2);
+   	
+   	IntegerSet test2 = new IntegerSet();
+   	test2.add(2);
+   	test2.add(3);
+   	
+   
+   	test.diff(test2);
+    
+   //System.out.println(test.union(test2));
+    //assertEquals("[1, 3]");
+    }
+    */
+    //Junit test for difference
+    
+    /*
+    @Test
+    @DisplayName("Test case for intersection")
+    public void testIntersect() throws IntegerSetException {
+    String intersect;
+    
+    IntegerSet test = new IntegerSet();
+   	test.add(1);
+   	test.add(2);
+   	test.add(3);
+   	
+   	IntegerSet test2 = new IntegerSet();
+   	test2.add(3);
+   	test2.add(5);
+   	
+   
+   	test.intersect(test2);
+    
+    assertEquals("[3]", ;
+    } 
+    */
+    // Junit test case for intersection
     }
 
 
